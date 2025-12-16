@@ -41,12 +41,19 @@ class Perceptron:
 # Generate a larger dataset
 # -------------------------------------------------------
 
-np.random.seed(42)
+# np.random.seed(42)
+n_train = 100
+n_test = 30
 
-X_train = np.linspace(0, 20, 100).reshape(-1, 1)
+# X_train = np.linspace(0, 20, 100).reshape(-1, 1)
+# y_train = 2 * X_train.squeeze() + 1
+X_train = np.random.uniform(0, 20, size=(n_train, 1))
 y_train = 2 * X_train.squeeze() + 1
 
-X_test = np.linspace(21, 30, 30).reshape(-1, 1)
+
+# X_test = np.linspace(21, 30, 30).reshape(-1, 1)
+# y_test = 2 * X_test.squeeze() + 1
+X_test = np.random.uniform(21, 30, size=(n_test, 1))
 y_test = 2 * X_test.squeeze() + 1
 
 
@@ -55,7 +62,7 @@ y_test = 2 * X_test.squeeze() + 1
 # -------------------------------------------------------
 
 model = Perceptron(input_dim=1, lr=0.001)
-loss_history = model.train(X_train, y_train, epochs=500)
+loss_history = model.train(X_train, y_train, epochs=100)
 
 
 # -------------------------------------------------------
