@@ -5,7 +5,7 @@ matplotlib.use('TkAgg')
 
 
 class Perceptron:
-    def __init__(self, input_dim, lr=0.01):
+    def __init__(self, input_dim, lr=0.1):
         self.W = np.random.randn(input_dim) * 0.01
         self.b = 0.0
         self.lr = lr
@@ -90,7 +90,7 @@ print("Test R²:", r2)
 # -------------------------------------------------------
 # Plots
 # -------------------------------------------------------
-
+"""
 plt.figure(figsize=(8, 5))
 plt.plot(loss_history)
 plt.title("Training Loss Curve")
@@ -108,3 +108,4 @@ plt.ylabel("y")
 plt.legend()
 plt.grid(True)
 plt.show()
+"""
